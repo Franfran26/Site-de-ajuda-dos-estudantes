@@ -1,0 +1,237 @@
+/* 
+   Remove as margens padrão que o navegador coloca na página.
+   Isso nos dá mais controle sobre o espaço do site.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+   Define a aparência geral da página.
+*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #222222;
+}
+
+/*
+   Estiliza o cabeçalho do site.
+*/
+.cabecalho {
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/*
+   Organiza a logo e o nome do projeto
+   lado a lado.
+*/
+.identidade {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/*
+   Define o tamanho da logo.
+*/
+.identidade img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/*
+   Estiliza o nome do projeto.
+*/
+.identidade h1 {
+    font-size: 24px;
+    color: #1f5f4a;
+}
+/*
+   Define o espaço e a aparência da área
+   principal de apresentação do projeto.
+*/
+.apresentacao {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/*
+   Estiliza o título da apresentação.
+*/
+.apresentacao h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #1f5f4a;
+}
+
+/*
+   Estiliza os textos da apresentação.
+*/
+.apresentacao p {
+    margin-bottom: 15px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #444444;
+}
+/*
+   Cria o espaço e a aparência da área
+   onde ficará o formulário.
+*/
+.cadastro {
+    max-width: 900px;
+    margin: 30px auto 50px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+/*
+   Estiliza o título do formulário.
+*/
+.cadastro h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #1f5f4a;
+}
+
+/*
+   Cria um espaço entre cada campo
+   do formulário.
+*/
+.campo {
+    margin-bottom: 20px;
+}
+
+/*
+   Coloca o texto do label acima
+   do campo correspondente.
+*/
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333333;
+}
+
+/*
+   Estiliza os campos de texto,
+   número e a lista de opções.
+*/
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/*
+   Muda a aparência do campo quando
+   o usuário clica nele para digitar.
+*/
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: #1f5f4a;
+}
+
+/*
+   Estiliza o botão de cadastro.
+*/
+.cadastro button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1f5f4a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*
+   Muda a cor do botão quando o mouse
+   passa por cima dele.
+*/
+.cadastro button:hover {
+    background-color: #174838;
+}
+/*
+   Define a aparência da seção
+   de fichas cadastradas.
+*/
+.fichas {
+    max-width: 900px;
+    margin: 30px auto 50px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+/*
+   Estiliza o título da seção.
+*/
+.fichas h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #1f5f4a;
+}
+
+/*
+   Estiliza a mensagem que aparece
+   quando ainda não temos fichas exibidas.
+*/
+.mensagem-vazia {
+    text-align: center;
+    color: #666666;
+}
+/*
+   Estiliza cada ficha cadastrada.
+*/
+.ficha {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f4f7f6;
+    border-left: 5px solid #1f5f4a;
+    border-radius: 8px;
+}
+
+
+/*
+   Estiliza o título de cada ficha.
+*/
+.ficha h3 {
+    margin-bottom: 15px;
+    color: #1f5f4a;
+}
+
+
+/*
+   Cria espaço entre as informações
+   de cada ficha.
+*/
+.ficha p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #444444;
+}
+
+
+/*
+   Destaca os nomes dos campos.
+*/
+.ficha strong {
+    color: #222222;
+}
