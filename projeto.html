@@ -15,159 +15,759 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<meta charset="UTF-8">
 
-    <!-- Cabeçalho principal do site -->
-    <header class="cabecalho">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-        <!-- Área que contém a logo e o nome do projeto -->
-        <div class="identidade">
+<title>
+    Construindo Destinos do Ensino
+</title>
 
-            <!-- Mostra a logo que está dentro da pasta imagens -->
-            <img src="imagens/logo1.png" alt="Logo do projeto">
+<link
+    rel="stylesheet"
+    href="style.css"
+>
 
-            <!-- Nome do projeto -->
-            <h1>Construindo Destinos do Ensino</h1>
+</head> <body>
+<!-- ==================================================
+     CABEÇALHO
+================================================== -->
+
+<header class="cabecalho">
+
+    <div class="identidade">
+
+        <img
+            src="imagens/logo1.png"
+            alt="Logo do projeto"
+
+             src="imagens/logo2.png"
+            alt="Logo secundaria"
+
+        >
+
+        <div>
+
+            <h1>
+                Construindo Destinos do Ensino
+            </h1>
+
+            <span>
+                Aprender • Praticar • Evoluir
+            </span>
 
         </div>
 
-    </header>
+    </div>
 
 
-    <!-- Área principal do site -->
-    <main>
+    <nav class="menu">
 
-        <!-- Seção de apresentação -->
-        <section class="apresentacao">
+        <a href="#inicio">
+            Início
+        </a>
 
-            <!-- Título principal da seção -->
-            <h2>Aprenda, supere dificuldades e construa seu destino.</h2>
+        <a href="#recursos">
+            Recursos
+        </a>
 
-            <!-- Texto explicando a finalidade do site -->
+        <a href="#estudar">
+            Estudar
+        </a>
+
+        <a href="#progresso">
+            Meu progresso
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ==================================================
+     HERO / INÍCIO
+================================================== -->
+
+<main id="inicio">
+
+    <section class="hero">
+
+        <div class="hero-conteudo">
+
+            <span class="tag-hero">
+                🚀 SEU ESPAÇO DE APRENDIZAGEM
+            </span>
+
+            <h2>
+                Estudar pode ser
+                <span>divertido.</span>
+            </h2>
+
             <p>
-                O Construindo Destinos do Ensino foi criado para ajudar
-                estudantes que enfrentam dificuldades na hora de estudar,
-                oferecendo um espaço para aprender e reforçar conhecimentos.
+
+                Aprenda novos conteúdos,
+                responda desafios, ganhe pontos
+                e descubra até onde você consegue chegar.
+
             </p>
 
-            <!-- Informação sobre o objetivo do projeto -->
-            <p>
-                Nosso projeto está relacionado ao ODS 4:
-                Educação de qualidade.
-            </p>
 
-        </section>
+            <div class="hero-botoes">
 
+                <a
+                    href="#estudar"
+                    class="botao-principal"
+                >
+                    🎯 Começar agora
+                </a>
 
-        <!-- Seção de cadastro -->
-        <section class="cadastro">
+                <a
+                    href="#recursos"
+                    class="botao-secundario-link"
+                >
+                    Descobrir recursos →
+                </a>
 
-            <!-- Título do formulário -->
-            <h2>Cadastre sua ficha</h2>
-
-            <!-- Formulário de cadastro -->
-            <form id="formularioCadastro">
-
-                <!-- Campo de texto curto -->
-                <div class="campo">
-
-                    <label for="ajudando">
-                        Ajudando estudantes na hora de aprender:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="ajudando"
-                        name="ajudando"
-                        placeholder="Digite uma resposta curta"
-                        required
-                    >
-
-                </div>
+            </div>
 
 
-                <!-- Campo com opções de educação -->
-                <div class="campo">
+            <div class="mini-estatisticas">
 
-                    <label for="educacao">
-                        Educação:
-                    </label>
+                <div>
 
-                    <select
-                        id="educacao"
-                        name="educacao"
-                        required
-                    >
-                        <option value="">
-                            Selecione uma opção
-                        </option>
+                    <strong>
+                        8
+                    </strong>
 
-                        <option value="Educação">
-                            Educação
-                        </option>
-
-                    </select>
+                    <span>
+                        matérias
+                    </span>
 
                 </div>
 
 
-                <!-- Campo numérico -->
-                <div class="campo">
+                <div>
 
-                    <label for="numero">
-                        4:
-                    </label>
+                    <strong>
+                        40+
+                    </strong>
 
-                    <input
-                        type="number"
-                        id="numero"
-                        name="numero"
-                        required
-                    >
+                    <span>
+                        desafios
+                    </span>
 
                 </div>
 
 
-                <!-- Botão para enviar o formulário -->
-                <button type="submit">
-                    Cadastrar
+                <div>
+
+                    <strong>
+                        ∞
+                    </strong>
+
+                    <span>
+                        tentativas
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================
+             CARROSSEL
+        ================================================== -->
+
+        <div class="carrossel-container">
+
+            <div
+                class="carrossel"
+                id="carrossel"
+            >
+
+                <div class="slide slide-1">
+
+                    <div class="slide-icone">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Treine seu cérebro
+                    </h3>
+
+                    <p>
+                        Resolva desafios e descubra
+                        o quanto você já aprendeu.
+                    </p>
+
+                </div>
+
+
+                <div class="slide slide-2">
+
+                    <div class="slide-icone">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Evolua todos os dias
+                    </h3>
+
+                    <p>
+                        Cada pequena descoberta
+                        faz você avançar.
+                    </p>
+
+                </div>
+
+
+                <div class="slide slide-3">
+
+                    <div class="slide-icone">
+                        🏆
+                    </div>
+
+                    <h3>
+                        Conquiste seu espaço
+                    </h3>
+
+                    <p>
+                        Acumule pontos e suba
+                        de nível.
+                    </p>
+
+                </div>
+
+
+                <div class="slide slide-4">
+
+                    <div class="slide-icone">
+                        💡
+                    </div>
+
+                    <h3>
+                        Aprenda de outro jeito
+                    </h3>
+
+                    <p>
+                        Dicas, exemplos, perguntas
+                        e atividades interativas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="controles-carrossel">
+
+                <button
+                    type="button"
+                    id="anteriorSlide"
+                >
+                    ←
                 </button>
 
-            </form>
+                <div
+                    id="indicadores"
+                    class="indicadores"
+                >
+                </div>
 
-        </section>
-                <!-- Seção onde as fichas cadastradas serão exibidas -->
-        <section class="fichas">
+                <button
+                    type="button"
+                    id="proximoSlide"
+                >
+                    →
+                </button>
 
-            <!-- Título da seção -->
-            <h2>Fichas cadastradas</h2>
+            </div>
 
-            <!--
-                Este espaço receberá as fichas através
-                do JavaScript posteriormente.
-            -->
-            <div id="listaFichas">
+        </div>
 
-                <!-- Mensagem inicial enquanto não há fichas exibidas -->
-                <p class="mensagem-vazia">
-                    As fichas cadastradas aparecerão aqui.
+    </section>
+
+
+
+    <!-- ==================================================
+         RECURSOS
+    ================================================== -->
+
+    <section
+        class="recursos"
+        id="recursos"
+    >
+
+        <div class="titulo-secao">
+
+            <span>
+                ✨ FEITO PARA ESTUDANTES
+            </span>
+
+            <h2>
+                Aprenda do seu jeito
+            </h2>
+
+            <p>
+                Aqui estudar não precisa ser apenas
+                ler e decorar.
+            </p>
+
+        </div>
+
+
+        <div class="cards-recursos">
+
+
+            <div class="card-3d">
+
+                <div class="card-icone">
+                    🧠
+                </div>
+
+                <h3>
+                    Desafios
+                </h3>
+
+                <p>
+                    Teste seus conhecimentos
+                    com perguntas interativas.
+                </p>
+
+                <span>
+                    + perguntas
+                </span>
+
+            </div>
+
+
+            <div class="card-3d">
+
+                <div class="card-icone">
+                    🎴
+                </div>
+
+                <h3>
+                    Flashcards
+                </h3>
+
+                <p>
+                    Revise conceitos importantes
+                    de maneira rápida.
+                </p>
+
+                <span>
+                    revisão rápida
+                </span>
+
+            </div>
+
+
+            <div class="card-3d">
+
+                <div class="card-icone">
+                    ⭐
+                </div>
+
+                <h3>
+                    Pontuação
+                </h3>
+
+                <p>
+                    Acertou? Ganhe pontos e
+                    acompanhe sua evolução.
+                </p>
+
+                <span>
+                    +10 pontos
+                </span>
+
+            </div>
+
+
+            <div class="card-3d">
+
+                <div class="card-icone">
+                    🔥
+                </div>
+
+                <h3>
+                    Sequência
+                </h3>
+
+                <p>
+                    Tente acertar várias perguntas
+                    seguidas.
+                </p>
+
+                <span>
+                    mantenha o ritmo
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         PROGRESSO
+    ================================================== -->
+
+    <section
+        class="progresso"
+        id="progresso"
+    >
+
+        <div class="progresso-conteudo">
+
+            <div>
+
+                <span class="tag-secao">
+                    📊 SEU DESEMPENHO
+                </span>
+
+                <h2>
+                    Seu progresso
+                </h2>
+
+                <p>
+                    Cada pergunta respondida é
+                    uma oportunidade para aprender.
                 </p>
 
             </div>
 
-        </section>
+
+            <div class="painel-progresso">
+
+                <div class="numero-progresso">
+
+                    <span id="pontuacaoPrincipal">
+                        0
+                    </span>
+
+                    <small>
+                        pontos
+                    </small>
+
+                </div>
 
 
-    </main>
+                <div class="barra-container">
+
+                    <div
+                        class="barra-progresso"
+                        id="barraProgresso"
+                    >
+                    </div>
+
+                </div>
 
 
-    <!--
-        O JavaScript fica no final do body.
-        Assim, todo o HTML já foi carregado
-        quando o JavaScript procurar pelo formulário.
-    -->
-    <script src="script.js"></script>
+                <div class="informacoes-progresso">
 
-</body>
+                    <span id="nivelTexto">
+                        Nível 1 — Explorador
+                    </span>
 
-</html>
+                    <span id="sequenciaTexto">
+                        🔥 Sequência: 0
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         ÁREA DE ESTUDOS
+    ================================================== -->
+
+    <section
+        class="estudar"
+        id="estudar"
+    >
+
+        <div class="titulo-secao titulo-branco">
+
+            <span>
+                📚 HORA DE APRENDER
+            </span>
+
+            <h2>
+                Escolha uma matéria
+            </h2>
+
+            <p>
+                Escolha uma área e comece sua jornada.
+            </p>
+
+        </div>
+
+
+        <div
+            class="materias"
+            id="materias"
+        >
+
+
+            <button
+                type="button"
+                class="materia"
+                data-materia="matematica"
+            >
+
+                <span>
+                    📐
+                </span>
+
+                <strong>
+                    Matemática
+                </strong>
+
+                <small>
+                    lógica e números
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="materia"
+                data-materia="portugues"
+            >
+
+                <span>
+                    📚
+                </span>
+
+                <strong>
+                    Português
+                </strong>
+
+                <small>
+                    leitura e escrita
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="materia"
+                data-materia="ciencias"
+            >
+
+                <span>
+                    🔬
+                </span>
+
+                <strong>
+                    Ciências
+                </strong>
+
+                <small>
+                    vida e natureza
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="materia"
+                data-materia="historia"
+            >
+
+                <span>
+                    🏛️
+                </span>
+
+                <strong>
+                    História
+                </strong>
+
+                <small>
+                    passado e sociedade
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="materia"
+                data-materia="geografia"
+            >
+
+                <span>
+                    🌎
+                </span>
+
+                <strong>
+                    Geografia
+                </strong>
+
+                <small>
+                    espaço e planeta
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="materia"
+                data-materia="ingles"
+            >
+
+                <span>
+                    🇺🇸
+                </span>
+
+                <strong>
+                    Inglês
+                </strong>
+
+                <small>
+                    language
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="materia"
+                data-materia="biologia"
+            >
+
+                <span>
+                    🧬
+                </span>
+
+                <strong>
+                    Biologia
+                </strong>
+
+                <small>
+                    seres vivos
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="materia"
+                data-materia="fisica"
+            >
+
+                <span>
+                    ⚡
+                </span>
+
+                <strong>
+                    Física
+                </strong>
+
+                <small>
+                    energia e movimento
+                </small>
+
+            </button>
+
+        </div>
+
+
+        <!-- ==================================================
+             CONTEÚDO GERADO PELO JAVASCRIPT
+        ================================================== -->
+
+        <div
+            id="areaConteudo"
+            class="area-conteudo"
+        >
+
+            <div class="boas-vindas">
+
+                <div>
+                    📚
+                </div>
+
+                <h3>
+                    Escolha uma matéria
+                </h3>
+
+                <p>
+                    Seu próximo desafio está esperando.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ==================================================
+     RODAPÉ
+================================================== -->
+
+<footer class="rodape">
+
+    <div>
+
+        <h3>
+            Construindo Destinos do Ensino
+        </h3>
+
+        <p>
+            Aprender hoje para construir
+            os destinos de amanhã.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <strong>
+            ODS 4
+        </strong>
+
+        <p>
+            Educação de qualidade
+        </p>
+
+    </div>
+
+
+    <p class="copyright">
+        Projeto escolar • Construindo Destinos do Ensino
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body> </html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Define que o site utiliza caracteres da língua portuguesa -->
+    <meta charset="UTF-8">
+
+    <!-- Faz o site se adaptar a celulares, tablets e computadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome que aparecerá na aba do navegador -->
+    <title>Construindo Destinos do Ensino</title>
+
+    <!-- Conecta o arquivo HTML ao arquivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho principal do site -->
+    <header class="cabecalho">
+
+        <!-- Área que contém a logo e o nome do projeto -->
+        <div class="identidade">
+
+            <!-- Mostra a logo que está dentro da pasta imagens -->
+            <img src="imagens/logo1.png" alt="Logo do projeto">
+
+            <!-- Nome do projeto -->
+            <h1>Construindo Destinos do Ensino</h1>
+
+        </div>
+
+    </header>
+
+
+    <!-- Área principal do site -->
+    <main>
+
+        <!-- Seção de apresentação -->
+        <section class="apresentacao">
+
+            <!-- Título principal da seção -->
+            <h2>Aprenda, supere dificuldades e construa seu destino.</h2>
+
+            <!-- Texto explicando a finalidade do site -->
+            <p>
+                O Construindo Destinos do Ensino foi criado para ajudar
+                estudantes que enfrentam dificuldades na hora de estudar,
+                oferecendo um espaço para aprender e reforçar conhecimentos.
+            </p>
+
+            <!-- Informação sobre o objetivo do projeto -->
+            <p>
+                Nosso projeto está relacionado ao ODS 4:
+                Educação de qualidade.
+            </p>
+
+        </section>
+
+
+        <!-- Seção de cadastro -->
+        <section class="cadastro">
+
+            <!-- Título do formulário -->
+            <h2>Cadastre sua ficha</h2>
+
+            <!-- Formulário de cadastro -->
+            <form id="formularioCadastro">
+
+                <!-- Campo de texto curto -->
+                <div class="campo">
+
+                    <label for="ajudando">
+                        Ajudando estudantes na hora de aprender:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ajudando"
+                        name="ajudando"
+                        placeholder="Digite uma resposta curta"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Campo com opções de educação -->
+                <div class="campo">
+
+                    <label for="educacao">
+                        Educação:
+                    </label>
+
+                    <select
+                        id="educacao"
+                        name="educacao"
+                        required
+                    >
+                        <option value="">
+                            Selecione uma opção
+                        </option>
+
+                        <option value="Educação">
+                            Educação
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Campo numérico -->
+                <div class="campo">
+
+                    <label for="numero">
+                        4:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="numero"
+                        name="numero"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Botão para enviar o formulário -->
+                <button type="submit">
+                    Cadastrar
+                </button>
+
+            </form>
+
+        </section>
+                <!-- Seção onde as fichas cadastradas serão exibidas -->
+        <section class="fichas">
+
+            <!-- Título da seção -->
+            <h2>Fichas cadastradas</h2>
+
+            <!--
+                Este espaço receberá as fichas através
+                do JavaScript posteriormente.
+            -->
+            <div id="listaFichas">
+
+                <!-- Mensagem inicial enquanto não há fichas exibidas -->
+                <p class="mensagem-vazia">
+                    As fichas cadastradas aparecerão aqui.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!--
+        O JavaScript fica no final do body.
+        Assim, todo o HTML já foi carregado
+        quando o JavaScript procurar pelo formulário.
+    -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
