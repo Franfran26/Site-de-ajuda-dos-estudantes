@@ -70,26 +70,18 @@ display: flex;
 
 align-items: center;
 
-gap: 13px;
+gap: 15px;
 
 }
 
 .identidade img {
-    width: 54px;
-    height: 54px;
-    object-fit: cover; /* Muda para cover para preencher o círculo forçadamente */
-    
-    /* TRUQUE SUPREMO: Corta qualquer imperfeição da imagem em um círculo perfeito */
-    clip-path: circle(50% at 50% 50%); 
-    
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 2px; /* Reduzido para a imagem expandir até sumir o corte */
-    box-shadow: 0 4px 10px rgba(31, 95, 74, 0.12);
+width: 58px;
+
+height: 58px;
+
+object-fit: contain;
+
 }
-
-
-
 
 .identidade h1 {
 color: #1f5f4a;
@@ -327,11 +319,12 @@ transition:
 }
 
 .botao-principal:hover {
-    transform: translateY(-4px);
-    box-shadow:
-        0 15px 30px rgba(31, 95, 74, 0.35),
-        0 0 20px rgba(39, 168, 112, 0.6); 
-    filter: brightness(1.1);
+transform: translateY(-4px);
+
+box-shadow:
+    0 15px 30px
+    rgba(31, 95, 74, 0.35);
+
 }
 
 .botao-secundario-link {
@@ -730,8 +723,9 @@ box-shadow:
     0 15px 35px
     rgba(27, 76, 57, 0.08);
 
-/* AJUSTADO: Tempo de resposta rápido para seguir o mouse perfeitamente */
-transition: transform 0.1s ease, box-shadow 0.3s ease;
+transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 
 transform-style: preserve-3d;
 
@@ -740,13 +734,6 @@ position: relative;
 overflow: hidden;
 
 }
-
-/* NOVO: Faz o emoji (ícone) saltar para fora do card no efeito 3D */
-.card-3d:hover .card-icone {
-    transform: translateZ(30px);
-    transition: transform 0.3s ease;
-}
-
 
 .card-3d::before {
 content: "";
@@ -1824,38 +1811,4 @@ RESPONSIVIDADE
     font-size: 26px;
 }
 
-}
-
-
-/* ==========================================================================
-   TOQUES FINAIS: VIDRO NO TOPO, BRILHO NO BOTÃO E VELOCIDADE DOS CARDS 3D
-   ========================================================================== */
-
-/* Substitui o topo antigo pelo efeito de vidro fosco moderno */
-.cabecalho {
-    background: rgba(255, 255, 255, 0.75) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
-    transition: background 0.3s ease !important;
-}
-
-/* Substitui o botão antigo para adicionar a aura brilhante verde */
-.botao-principal:hover {
-    transform: translateY(-4px) !important;
-    box-shadow: 0 15px 30px rgba(31, 95, 74, 0.35), 0 0 20px rgba(39, 168, 112, 0.6) !important; 
-    filter: brightness(1.1) !important;
-}
-
-/* Deixa a velocidade do card 3D perfeita para seguir o mouse */
-.card-3d {
-    transition: transform 0.1s ease, box-shadow 0.3s ease !important;
-    transform-style: preserve-3d !important;
-}
-
-/* Faz o emoji de dentro saltar na sua direção */
-.card-3d:hover .card-icone {
-    transform: translateZ(30px) !important;
-    transition: transform 0.3s ease !important;
 }

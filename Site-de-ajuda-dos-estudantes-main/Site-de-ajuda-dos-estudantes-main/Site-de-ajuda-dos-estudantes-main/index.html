@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define que o site utiliza caracteres da língua portuguesa -->
+    <meta charset="UTF-8">
+
+    <!-- Faz o site se adaptar a celulares, tablets e computadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome que aparecerá na aba do navegador -->
+    <title>Entrar - Construindo Destinos do Ensino</title>
+
+    <!-- Conecta a essa nova página ao seu arquivo de estilos existente -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-login">
+
+    <div class="login-container">
+        
+        <!-- LADO ESQUERDO: Explicação da dor que o professor pediu -->
+        <div class="dor-container">
+            <span class="tag-hero">💡 O PROBLEMA</span>
+            <h2>Estudar se tornou <span>cansativo?</span></h2>
+            <p>
+                Sabemos o quanto é difícil manter o foco lendo textos longos e decorando fórmulas sem sentido. 
+                A falta de interatividade faz com que muitos estudantes desistam no meio do caminho.
+            </p>
+            <p class="solucao-texto">
+                🚀 <strong>Nossa Solução:</strong> Criamos um ambiente gamificado onde você aprende praticando, 
+                ganha pontos e acompanha sua evolução em tempo real.
+            </p>
+        </div>
+
+        <!-- LADO DIREITO: O Card de Cadastro/Login 3D -->
+        <div class="card-login-3d">
+            <div class="login-header">
+                <h3>Criar sua Conta</h3>
+                <p>Insira seus dados para começar a evoluir</p>
+            </div>
+            
+            <form id="formLogin" class="form-login">
+                <div class="campo">
+                    <label>Seu Nome</label>
+                    <input type="text" placeholder="Ex: João Silva" required>
+                </div>
+                <div class="campo">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="campo">
+                    <label>Senha</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+
+                <!-- Usa a mesma classe do seu botão principal para herdar o brilho verde -->
+                <button type="submit" class="botao-principal">🎯 Criar Conta e Entrar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Script para gerenciar a rotação do card e o redirecionamento seguro -->
+    <script>
+        // Efeito 3D flutuante no Card de Login seguindo o mouse
+        const cardLogin = document.querySelector('.card-login-3d');
+        
+        document.addEventListener('mousemove', (e) => {
+            const rect = cardLogin.getBoundingClientRect();
+            // Calcula a posição do mouse dentro do card (de -0.5 a 0.5)
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            // Inclina o card em até 15 graus com base na posição do mouse
+            cardLogin.style.transform = `perspective(1000px) rotateX(${-y * 15}deg) rotateY(${x * 15}deg)`;
+        });
+
+        // Quando o mouse sai, o card volta ao normal suavemente
+        cardLogin.addEventListener('mouseleave', () => {
+            cardLogin.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+        });
+
+        // Redireciona para o seu arquivo principal com o site todo
+        document.getElementById('formLogin').addEventListener('submit', (e) => {
+            e.preventDefault(); // Evita que a página recarregue
+            window.location.href = 'projeto.html'; /* Abre o seu site principal */
+        });
+    </script>
+</body>
+</html>

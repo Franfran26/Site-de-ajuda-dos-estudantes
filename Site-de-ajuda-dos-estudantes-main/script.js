@@ -2241,28 +2241,3 @@ function(card) {
 }
 
 );
- /* ==================================================
-   EFEITO INTERATIVO 3D NOS CARDS DE RECURSOS
-================================================== */
-document.addEventListener("DOMContentLoaded", () => {
-    // Seleciona todos os seus cards 3D
-    const cards = document.querySelectorAll('.card-3d');
-
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            
-            // Calcula a posição exata do mouse dentro do card (de -0.5 a 0.5)
-            const x = (e.clientX - rect.left) / rect.width - 0.5;
-            const y = (e.clientY - rect.top) / rect.height - 0.5;
-            
-            // Inclina o card suavemente em até 20 graus baseando-se no mouse
-            card.style.transform = `perspective(1000px) rotateX(${-y * 20}deg) rotateY(${x * 20}deg) translateY(-8px)`;
-        });
-        
-        // Faz o card voltar à posição original de forma suave quando o mouse sai
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
-        });
-    });
-});
